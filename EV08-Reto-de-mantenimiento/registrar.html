@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar · Sistema de inventario</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="barra">
+      <a class="marca" href="index.html">Sistema de inventario</a>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a class="actual" href="registrar.html">Registrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h1>Registrar producto</h1>
+    <p class="resumen">Completa los datos para agregar un producto al inventario.</p>
+
+    <form id="form-producto" class="tarjeta" action="productos.html" method="get">
+      <div class="campo">
+        <label for="nombreProducto">Nombre del producto</label>
+        <p id="ayuda-nombre" class="ayuda">Ingresa el nombre comercial del producto.</p>
+        <input type="text" id="nombreProducto" name="nombre">
+      </div>
+
+      <div class="campo">
+        <label for="precioProducto">Precio</label>
+        <input type="number" id="precioProducto" name="precio" min="0" step="any">
+      </div>
+
+      <div class="campo">
+        <label for="cantidadProducto">Cantidad disponible</label>
+        <input type="number" id="cantidadProducto" name="cantidad" min="0" step="1">
+      </div>
+
+      <div class="campo">
+        <label for="estadoProducto">Estado</label>
+        <select id="estadoProducto" name="estado">
+          <option value="">Selecciona un estado</option>
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="categoriaProducto">Categoría</label>
+        <select id="categoriaProducto" name="categoria_id">
+          <option value="">Selecciona una categoría</option>
+          <option value="1">Tecnología</option>
+          <option value="2">Hogar</option>
+          <option value="3">Moda</option>
+        </select>
+      </div>
+
+      <div class="acciones">
+        <button type="button" id="btn-guardar" class="btn">Guardar</button>
+        <a class="btn btn-secundario" href="productos.html">Cancelar</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="pie">Sistema de inventario · ADSO</footer>
+  <script src="assets/js/datos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle · Sistema de inventario</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="barra">
+      <a class="marca" href="index.html">Sistema de inventario</a>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="registrar.html">Registrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor" id="detalle-producto">
+    <h1>Detalle del producto</h1>
+    <p class="mensaje-vacio" id="mensaje-vacio" hidden>No se encontró el producto solicitado.</p>
+
+    <article class="tarjeta" id="panel-detalle">
+      <h2 id="d-nombre">Producto</h2>
+      <ul class="detalle-lista">
+        <li><strong>Categoría:</strong> <span id="d-categoria"></span></li>
+        <li><strong>Precio:</strong> <span id="d-precio"></span></li>
+        <li><strong>Cantidad disponible:</strong> <span id="d-cantidad"></span></li>
+        <li><strong>Estado:</strong> <span id="d-estado"></span></li>
+      </ul>
+      <a class="btn btn-secundario" href="productos.html">Volver al listado</a>
+    </article>
+  </main>
+
+  <footer class="pie">Sistema de inventario · ADSO</footer>
+  <script src="assets/js/datos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

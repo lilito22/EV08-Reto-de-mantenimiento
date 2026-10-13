@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos · Sistema de inventario</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="barra">
+      <a class="marca" href="index.html">Sistema de inventario</a>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a class="actual" href="productos.html">Productos</a>
+        <a href="registrar.html">Registrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Listado de productos</h1>
+        <p class="resumen">Productos disponibles en el inventario.</p>
+      </div>
+      <a class="btn" href="registrar.html">Nuevo producto</a>
+    </div>
+
+    <div class="tarjeta">
+      <div class="herramientas">
+        <form id="form-busqueda" class="busqueda" role="search">
+          <label for="buscador">Buscar producto</label>
+          <input type="text" id="buscador" name="buscador" placeholder="Nombre del producto">
+          <button type="submit" id="btn-buscar" class="btn">Buscar</button>
+          <button type="button" id="btn-limpiar" class="btn btn-secundario">Limpiar</button>
+        </form>
+        <div class="filtro">
+          <label for="filtro-estado">Estado</label>
+          <select id="filtro-estado" name="filtro-estado">
+            <option value="todos">Todos</option>
+            <option value="activos">Activos</option>
+            <option value="inactivos">Inactivos</option>
+          </select>
+        </div>
+      </div>
+      <p class="ayuda" id="contador"></p>
+
+      <table class="tabla">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+        <tr data-id="1">
+          <td>1</td>
+          <td>Laptop HP Pavillion</td>
+          <td>Tecnología</td>
+          <td>$3.200.000</td>
+          <td>10</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=1">Ver</a> <a href="registrar.html?id=1">Editar</a></td>
+        </tr>
+        <tr data-id="2">
+          <td>2</td>
+          <td>Televisor Samsung 55</td>
+          <td>Tecnología</td>
+          <td>$2.100.000</td>
+          <td>5</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=2">Ver</a> <a href="registrar.html?id=2">Editar</a></td>
+        </tr>
+        <tr data-id="3">
+          <td>3</td>
+          <td>Licuadora Oster</td>
+          <td>Hogar</td>
+          <td>$180.000</td>
+          <td>0</td>
+          <td><span class="badge-inactivo">Inactivo</span></td>
+          <td><a href="detalle.html?id=3">Ver</a> <a href="registrar.html?id=3">Editar</a></td>
+        </tr>
+        <tr data-id="4">
+          <td>4</td>
+          <td>Camisa manga larga</td>
+          <td>Moda</td>
+          <td>$75.000</td>
+          <td>40</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=4">Ver</a> <a href="registrar.html?id=4">Editar</a></td>
+        </tr>
+        <tr data-id="5">
+          <td>5</td>
+          <td>Mouse inalámbrico</td>
+          <td>Tecnología</td>
+          <td>$65.000</td>
+          <td>25</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=5">Ver</a> <a href="registrar.html?id=5">Editar</a></td>
+        </tr>
+        <tr data-id="6">
+          <td>6</td>
+          <td>Lámpara de escritorio</td>
+          <td>Hogar</td>
+          <td>$90.000</td>
+          <td>8</td>
+          <td><span class="badge-inactivo">Inactivo</span></td>
+          <td><a href="detalle.html?id=6">Ver</a> <a href="registrar.html?id=6">Editar</a></td>
+        </tr>
+        <tr data-id="7">
+          <td>7</td>
+          <td>Zapatos deportivos</td>
+          <td>Moda</td>
+          <td>$180.000</td>
+          <td>15</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=7">Ver</a> <a href="registrar.html?id=7">Editar</a></td>
+        </tr>
+        <tr data-id="8">
+          <td>8</td>
+          <td>Teclado mecánico</td>
+          <td>Tecnología</td>
+          <td>$250.000</td>
+          <td>12</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=8">Ver</a> <a href="registrar.html?id=8">Editar</a></td>
+        </tr>
+        <tr data-id="9">
+          <td>9</td>
+          <td>Cafetera</td>
+          <td>Hogar</td>
+          <td>$160.000</td>
+          <td>0</td>
+          <td><span class="badge-inactivo">Inactivo</span></td>
+          <td><a href="detalle.html?id=9">Ver</a> <a href="registrar.html?id=9">Editar</a></td>
+        </tr>
+        <tr data-id="10">
+          <td>10</td>
+          <td>Chaqueta impermeable</td>
+          <td>Moda</td>
+          <td>$210.000</td>
+          <td>7</td>
+          <td><span class="badge-activo">Activo</span></td>
+          <td><a href="detalle.html?id=10">Ver</a> <a href="registrar.html?id=10">Editar</a></td>
+        </tr>
+      </table>
+      <p class="mensaje-vacio" id="mensaje-vacio" hidden></p>
+    </div>
+  </main>
+
+  <footer class="pie">Sistema de inventario · ADSO</footer>
+  <script src="assets/js/datos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
